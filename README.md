@@ -102,6 +102,10 @@ Usage
   * For Ubuntu: `sudo apt-get install libssl-dev`
 * Boost is required for the cryptonote-util module
   * For Ubuntu: `sudo apt-get install libboost-all-dev`
+
+* For Ubuntu you can use *byobu* instead od screen
+  * `byobu`
+  
 * Screen - for running the different parts of the pool in the background. This may come pre-installed on some systems.
   * For Ubuntu: `sudo apt-get install screen`
   * Usage:  
@@ -123,6 +127,22 @@ Those are legitimate requirements. If you use a different version of Node.js or 
 include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to learn about and understand software that
 you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
 
+
+### INSTALL
+```
+# UBUNTU 16.04
+sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libunbound-dev
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+source .bashrc
+
+nvm install 0.10.48
+nvm use 0.10.48
+
+git clone https://github.com/electroneum/electroneum-pool.git pool
+cd pool
+npm update
+```
 
 #### 1) Downloading & Installing
 
