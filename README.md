@@ -132,7 +132,7 @@ you are using - a good place to start with redis is [data persistence](http://re
 ### INSTALL ALL STEPS
 ```
 # UBUNTU 16.04
-sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libunbound-dev
+sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libunbound-dev redis-server git wget vim
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 source .bashrc
@@ -154,7 +154,7 @@ npm update
 --disable-rpc-login
 
 # run pool
-nodejs init.js
+node init.js
 ```
 
 #### 1) Downloading & Installing
