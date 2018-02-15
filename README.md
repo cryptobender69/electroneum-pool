@@ -6,6 +6,7 @@ Comes with lightweight example front-end script which uses the pool's AJAX API.
 
 
 #### Table of Contents
+* [INSTALL ALL STEPS](#install-all-steps)
 * [Features](#features)
 * [Community Support](#community--support)
 * [Pools Using This Software](#pools-using-this-software)
@@ -128,7 +129,7 @@ include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to lea
 you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
 
 
-### INSTALL
+### INSTALL ALL STEPS
 ```
 # UBUNTU 16.04
 sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libunbound-dev
@@ -142,6 +143,18 @@ nvm use 0.10.48
 git clone https://github.com/electroneum/electroneum-pool.git pool
 cd pool
 npm update
+
+# update config 
+
+# run wallet rpc
+./electroneum-wallet-rpc \
+--wallet-file walletfilename \
+--password walletfilepassword \
+--rpc-bind-port 26969 \
+--disable-rpc-login
+
+# run pool
+nodejs init.js
 ```
 
 #### 1) Downloading & Installing
